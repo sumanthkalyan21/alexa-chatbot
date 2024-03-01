@@ -1,0 +1,317 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "month",
+              "elicitationRequired": true,
+              "type": "AMAZON.Month",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.191621460684.1300396861755"
+              }
+            },
+            {
+              "name": "day",
+              "elicitationRequired": true,
+              "type": "AMAZON.Ordinal",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.191621460684.377382374674"
+              }
+            },
+            {
+              "name": "year",
+              "elicitationRequired": true,
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.191621460684.723625767814"
+              }
+            }
+          ],
+          "name": "ZodiacSignIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "genre",
+              "elicitationRequired": true,
+              "type": "AMAZON.Genre",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.819317198570.713633914223"
+              }
+            },
+            {
+              "name": "language",
+              "elicitationRequired": true,
+              "type": "AMAZON.Language",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.819317198570.341771017609"
+              }
+            },
+            {
+              "name": "actor",
+              "elicitationRequired": true,
+              "type": "AMAZON.Actor",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.819317198570.1499997992091"
+              }
+            }
+          ],
+          "name": "MoviesIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "month",
+              "type": "AMAZON.Month"
+            },
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "day",
+              "type": "AMAZON.Ordinal"
+            },
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER"
+            }
+          ],
+          "name": "ZodiacSignIntent",
+          "samples": [
+            "month day year",
+            "my month is {month}",
+            "my date is {day}",
+            "my year is {year}",
+            "my date of birth is {year} {day} {month}",
+            "my date of birth is {month} {day} {year}",
+            "my date of birth is {day} {year} {month}",
+            "my date of birth is {year} {month} {day}",
+            "my date of birth is {month} {year} {day}",
+            "my date of birth is {day} {month} {year}",
+            "{month} {year} {day}",
+            "{year} {month} {day}",
+            "{day} {year} {month}",
+            "{day} {month} {year}",
+            "{year} {day} {month}",
+            "{month} {day} {year}",
+            "can you tell me what is my sign {year} {month} {day}",
+            "can you tell me what is my sign {day} {year} {month}",
+            "can you tell me what is my sign {day} {month} {year}",
+            "what is my zodiac sign with {day} {month} {year}",
+            "what is my zodiac sign with {month} {year} {day}",
+            "{day} ",
+            "born in {month} {year} {day}",
+            "born in {year} {day} {month}",
+            "born in {day} {month} {year}",
+            "{year}",
+            "{month}",
+            "I was born on November Nineteen {year}",
+            "I was born on November {day} Nineteen Ninety Eight",
+            "I was born on {month} Nineteen Nineteen Ninety Eight",
+            "I was born on November Nineteen Nineteen Ninety Eight"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "genre",
+              "type": "AMAZON.Genre"
+            },
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "language",
+              "type": "AMAZON.Language"
+            },
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "actor",
+              "type": "AMAZON.Actor"
+            }
+          ],
+          "name": "MoviesIntent",
+          "samples": [
+            "what is the meaning of roth iras",
+            "{genre} is my favourite genre",
+            "recommendation is a bass house with a bass",
+            "give me a recommendation",
+            "recommend a movie",
+            "recommend an action movie",
+            "recommend an action movie with a five star ranking",
+            "description of the bass house of {actor}",
+            "show an action movie of {actor}",
+            "tell an action movie",
+            "can you recommend an action movie",
+            "recommend an action film",
+            "can you recommend an action film",
+            "get an action movie",
+            "recommendation recommend {genre} movie",
+            "can you recommend an action film with a five star ranking",
+            "recommendation recommend {genre} film",
+            "tell me an action film",
+            "can you give me an action movie a five star ranking in {language} movie",
+            "recommendation propose a british english movie",
+            "recommend an action movie a five star ranking",
+            "recommend an english movie {genre} jordan",
+            "do you want to recommend a bass house film",
+            "give an action film",
+            "recommendation suggested i have an mai movie",
+            "give the film the five star evaluation in british",
+            "can you tell me an {language} movie of {actor}",
+            "can you tell me an action movie a five star ranking",
+            "get an {language} movie of {actor}",
+            "what is a good {genre} movie",
+            "recommend {language} mai {actor}",
+            "recommendation suggest a movie of {language} movie",
+            "recommend an english movie a five star ranking in {language} movie",
+            "can you give an {genre} movie a five star ranking in {language} language",
+            "recommend an action movie a five star ranking in {language} language",
+            "recommend an {language} movie",
+            "can you tell me an {language} movie",
+            "suggest a movie of {actor}",
+            "recommend an {genre} film with a five star ranking",
+            "can you tell me an english movie of {actor}",
+            "tell me an english movie of {actor}",
+            "recommend an {genre} movie a five star ranking",
+            "{genre} {language} {actor}",
+            "recommend a movie of {actor}",
+            "recommend an english movie of {actor}",
+            "recommend an {language} movie of {actor}",
+            "recommendation suggest me a movie",
+            "recommendation suggest me an {language} movie",
+            "recommendation suggest a movie",
+            "recommendation suggest an {language} movie",
+            "recommendation recommend me a movie",
+            "recommendation recommend me an {language} movie",
+            "recommendation recommend a movie",
+            "recommendation suggest me a {genre} movie",
+            "recommendation suggest me a {genre} movie of {language} language",
+            "recommendation suggest a {genre} movie",
+            "recommendation recommend me a {genre} movie",
+            "recommendation recommend a {genre} movie",
+            "recommendation recommend an action movie",
+            "recommend an action film with a five star ranking",
+            "action film of tim roth",
+            "action film of rajnikanth",
+            "give an action movie a five star ranking",
+            "give an action movie a five star ranking in {language} language",
+            "give an action movie a five star ranking in english language",
+            "in the english language offer an action film",
+            "recommendation recommend an {genre} movie",
+            "recommend an {genre} film",
+            "{genre} film",
+            "give an {genre} movie",
+            "favourite genre {genre} is my favourite genre"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "get zodiac project"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what month you were born"
+          }
+        ],
+        "id": "Elicit.Slot.191621460684.1300396861755"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what day you were born"
+          }
+        ],
+        "id": "Elicit.Slot.191621460684.377382374674"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what year you were born"
+          }
+        ],
+        "id": "Elicit.Slot.191621460684.723625767814"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "which genre movie you watch"
+          }
+        ],
+        "id": "Elicit.Slot.819317198570.713633914223"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "which language you want"
+          }
+        ],
+        "id": "Elicit.Slot.819317198570.341771017609"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "which actor you want to watch"
+          }
+        ],
+        "id": "Elicit.Slot.819317198570.1499997992091"
+      }
+    ]
+  }
+}
